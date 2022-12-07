@@ -45,3 +45,25 @@ Also not to self, currently there is an untrack.txt file in my working directory
 
 Finally, I then ran `git add README.md` and `git commit -m "Practiced Add, Restore, Commit and Push".`
 And pomodoro break.
+
+2023-12-07T21:21
+Watched Video: Branches from Meta's Version Control Course. The video started with a follow-along example of how to use `git checkout` and `git merge`. Curiously, it didn't even explain conceptually what a branch is. I followed along the video, but ended up googling for answers. 
+
+Apparently, according to Atlassian, a "branch represents an independent line of development." From what I can gather, I should create a new branch when working on a specific thing like a feature or issue. I suppose then, that each branch could also be linked to some kind of requirements. But I'm only just guessing.
+
+There are some questions I have. Particularly, how would a solo developer work with git branches. For example, if I was working on multiple things at a same time, I would probably have to switch branches often don't I? It seems a tad of a bother to switch between branches often. I am also wondering what are the naming conventions for naming branches. And while I'm on the topic of convention, I have been wondering what are the best practices for writing commit messages. Or let's back up a little bit, when do we make commits to begin with. Right now, I'm just treating it as saving a file on a whim. 
+
+In any case, I want to try practice this branching thingy. So here's the plan. I will create a new branch called `feature/devlog-scripts`. Hypothetically, I will be working on developing a shell script to make logging from the cli easier. As it is, I am using nvim to write this. And I feel it would be better, if I could make create new entries on the fly from the cli. Especially with regards to adding the timestamp. Currently, I am typing the timestamp manually. I believe that by writing a shell script, it would reduce the barrier to making jots and let me make log entries more often.
+
+In this branch, I will add an empty `devlog.spec` file. Or maybe I'll just write some initial ideas for the feature. Don't mind the file extension. I think it just looks cool that way.
+
+So...
+`git branch feature/devlog-scripts`
+`touch devlog.spec`
+`git add devlog.spec`
+`git commit -m "Speccing the devlog feature"`
+`git push -u origin feature/devlog-scripts`
+
+By the end of this, I should be able to see the branch in the project's github page. To make it less complicated, I will first commit this latest entry. So in the `feature/devlog-scripts` branch, this log entry will be the last update. It gets confusing otherwise.
+
+
