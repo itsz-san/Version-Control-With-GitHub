@@ -66,4 +66,9 @@ So...
 
 By the end of this, I should be able to see the branch in the project's github page. To make it less complicated, I will first commit this latest entry. So in the `feature/devlog-scripts` branch, this log entry will be the last update. It gets confusing otherwise.
 
+2022-12-07T21:57
+Alright, it has been successful. But I fucked up the name of the branch. LOL! There is typo. But whatever. Ok, so the question I have is as I work on this feature, I add new entries here. I do the `git add`, `git commit`, `git push` and etc as usual. But This will only be in this branch. I wouldn't be able, for example, to see this entry if I switch to the main branch.
 
+And then, what happens if I made new entries that only exists in the main branch? When I complete this feature and try to merge this branch with the main, what happens?
+
+It's easy enough to understand that the new files will be added to the main branch. But what about conflicts? Alright that's enough wondering here. Let me try to get back to the main branch by using `git checkout main`.
