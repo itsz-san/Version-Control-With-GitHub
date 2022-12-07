@@ -66,4 +66,11 @@ So...
 
 By the end of this, I should be able to see the branch in the project's github page. To make it less complicated, I will first commit this latest entry. So in the `feature/devlog-scripts` branch, this log entry will be the last update. It gets confusing otherwise.
 
+2022-12-07T22:03
+Alright after spending a hot minute in the other branch I am back. I made a typo with the branch name. And I'm wondering how to change a branch name.
 
+Apparently, it's possible with `git branch -m new-branch name` But I will have to switch back to that branch first before renaming. So let's leave those worries, along with the worry of conflicts, out of this branch. 
+
+Also, in order to view branches. Use the `git branch` to list local repos. `-r` flag will list remote repos. `-a` will list ALL(both local and remote) repos.
+
+Any hows, I realised that the Video lesson included the merge workflow. But ergh, I'll do that later. Time to move on to the next lesson.
