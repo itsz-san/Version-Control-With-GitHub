@@ -135,3 +135,16 @@ This line is written, staged and commited from Github website.
 ```
 
 My question is what happens when I do either `push/pull`? Will the lines disappear? Let me test this out.
+
+2022-12-08T21:00
+Tried running `git pull --rebase` and the following message was returned;
+```
+Auto-merging Testing Push and Pull.txt
+CONFLICT (content): Merge conflict in Testing Push and Pull.txt
+error: could not apply 11e332c... Changed Testing Push and Pull.txt from local machine
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 11e332c... Changed Testing Push and Pull.txt from local machine
+```
