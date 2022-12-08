@@ -148,3 +148,40 @@ hint: You can instead skip this commit: run "git rebase --skip".
 hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
 Could not apply 11e332c... Changed Testing Push and Pull.txt from local machine
 ```
+
+2022-12-08T20:32
+With the abovementioned scenario, I tried running `git push`. The command failed with the following error message;
+```
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/itsz-san/Version-Control-With-GitHub.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+Folowing the message, I am going to try running `git pull` but I am wondering if it will overwrite what I have right now locally.
+
+Running `git pull` showed the following error message;
+```
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+```
+
+So currently, I cannot push changes to the remote repository. Nor can I pull changes from the remote repository to my local repository. And the question now is, What should I do?
+
+2022-12-08T20:50
+Completed Reading: Resolving Conflicts from Meta's Version Control course. It did absolutely nothing to help in the previous situation. Seriously, getting annoyed with the course quality. T_T
+
+The reading introduced the concept of conflict and merging and rebasing. But does very little to elaborate. I am now even more confused. In trying to figure things out, I'm learning about the `git fetch` command which hasn't been mentioned so far. Let me muck around until I get this sorted.
