@@ -74,3 +74,64 @@ Apparently, it's possible with `git branch -m new-branch name` But I will have t
 Also, in order to view branches. Use the `git branch` to list local repos. `-r` flag will list remote repos. `-a` will list ALL(both local and remote) repos.
 
 Any hows, I realised that the Video lesson included the merge workflow. But ergh, I'll do that later. Time to move on to the next lesson.
+
+2022-12-08T17:45
+Watched up Video: Remote vs Local from Meta's Version Control course. A short and quick video which I feel could have been introduced earlier. The recurring sentiment is that the course could have been structured differently. It's a sentiment that many in the discussion forum share. 
+
+A local and remote repository is self-explanatory. In any case, `git remote` lists the associated URLS of a git repo. `git remote add <url>` will add an upstream remote. Only with an upstream remote can we run `git push`, `git pull`, `git fetch` commands. As of now, we haven't covered `git fetch` yet. We have practised `git push`. But not `git pull` yet. As, we haven't really had a reason to do that yet. 
+
+ASIDE: I'm using nvim to edit this file. I've been using the arrow down key to scroll down to the end of the file before making entries. I figure, it's worth while to learn some basic vim motions to help me move the cursor around faster.
+
+G -> To jump to the last line
+CTRL-End -> Moves the cursor to the end of the last line
+    But I don't have an END key on my mechanical keyboard. lol
+G+A -> Move to bottom of the file and switch to insert mode.
+$ -> Shift cursor to end of line.
+0 -> Shift cursor to start of line.
+
+Also since, I have relative line numbers set up, I can jump to different lines by <Number>+j/k. 
+
+Having said that, the most important thing is - `nvim README.md`, then `G+A` to get the ball rolling.
+
+2022-12-08T18:04
+I feel the need to clarify with myself the concepts of git areas(?). This wasn't explained clearly in the course and the vocabulary used doesn't seem consistent.
+
+After reading through some articles and resources, I found that [The Three States and Areas of Git](https://snipcademy.com/git-fundamentals) gives the clearest and succinct introduction.
+
+Further readings include;
+-[Git Working Areas](https://blog.knoldus.com/git-working-areas/#3-repository-area)
+
+
+In my own words, content in a git system moves through four areas.
+1. Working Area (including Stash Area)
+    This is the workspace area or also known as the working directory. The Stash Area, made through the `git stash` commands, is something I should look into more.
+2. Staging Area
+    This is where content that is ready for commits live. Content that has been `git add` is moved to the Staging Area.
+3. Local Area
+    This is the snapshot of the local repository.
+4. Remote Area
+    And this is the snapshot of a remote repository.
+
+Fully understanding how git works would probably help ease my anxiety. The Medium article [Understanding Git - Index](https://konrad126.medium.com/understanding-git-index-4821a0765cf) by Zvonimir Spajic covers quite a bit and is quite easy to follow. The article is part of his Understanding Git series on Medium, and it is a much appreciated resource.
+
+
+2022-12-08T20:15
+Watched Video: Push and Pull from Meta's Version Control course. Fundamentally, the concept is easy to follow. The `git push` and `git pull` commands are used to manipulate content back and forth between two git areas; Local Area and Remote Area. As a reminder, the term area is synonymous with repository.
+
+However, I find myself still unclear of what happens when conflicts arise. To illustrate my concerns; imagine two versions of a single file `Testing Push and Pull.txt`.
+
+On the local repo the file contains the following;
+```
+This is a file to help me understand git push and pull workflows.
+
+This line is written, staged and commited from my local machine.
+```
+
+On the remote repo the file contains the following;
+```
+This is a file to help me understand git push and pull workflows.
+
+This line is written, staged and commited from Github website.
+```
+
+My question is what happens when I do either `push/pull`? Will the lines disappear? Let me test this out.
