@@ -185,3 +185,25 @@ So currently, I cannot push changes to the remote repository. Nor can I pull cha
 Completed Reading: Resolving Conflicts from Meta's Version Control course. It did absolutely nothing to help in the previous situation. Seriously, getting annoyed with the course quality. T_T
 
 The reading introduced the concept of conflict and merging and rebasing. But does very little to elaborate. I am now even more confused. In trying to figure things out, I'm learning about the `git fetch` command which hasn't been mentioned so far. Let me muck around until I get this sorted.
+
+2022-12-08T21:53
+Alright after some porridge and mucking around, I sort of get it a little bit. Due to the conflict(s), I ended up running `git pull --rebase`. After that I followed along with all messages to resolve the conflicts.
+
+Running `git status` after `git pull --rebase` shows the following message;
+```
+interactive rebase in progress; onto 2d2a9c7
+Last command done (1 command done):
+   pick 11e332c Changed Testing Push and Pull.txt from local machine
+Next command to do (1 remaining command):
+   pick 8b9ddfa Updated README.md
+  (use "git rebase --edit-todo" to view and edit)
+You are currently editing a commit while rebasing branch 'master' on '2d2a9c7'.
+  (use "git commit --amend" to amend the current commit)
+  (use "git rebase --continue" once you are satisfied with your changes)
+```
+
+The process is manual and tedious of sort. 
+
+The first one was with regards to `Testing push and pull.txt`. Opening the file, git has editted the content with visual indicators to mark conflicted content. Basically, look for `<<<<<<<`, `=======` and `>>>>>>>` to know where to make changes. I edited the file until I'm satisfied and I consider the conflict resolved. Then I do a `git add` and `git commit -m` for the changes. After which, I ran the `git rebase --continue` to move on to the next conflict until I see `Successfully rebased and updated refs/heads/master.`. Finally, when everythin is done, I pushed the local repository to the remote.
+
+This experiment has made me realised the importance of knowing when and what to commit. And it had me wondering how to write commit messages. 
