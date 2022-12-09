@@ -207,3 +207,12 @@ The process is manual and tedious of sort.
 The first one was with regards to `Testing push and pull.txt`. Opening the file, git has editted the content with visual indicators to mark conflicted content. Basically, look for `<<<<<<<`, `=======` and `>>>>>>>` to know where to make changes. I edited the file until I'm satisfied and I consider the conflict resolved. Then I do a `git add` and `git commit -m` for the changes. After which, I ran the `git rebase --continue` to move on to the next conflict until I see `Successfully rebased and updated refs/heads/master.`. Finally, when everythin is done, I pushed the local repository to the remote.
 
 This experiment has made me realised the importance of knowing when and what to commit. And it had me wondering how to write commit messages. 
+
+Fri  9 Dec 18:05:20 +08 2022
+Made a quick edit to the feature/devlog-scritpts to practice switching and working on another branch. As a reminder, to see other branches use the `git branch` command. To switch to another branch, `git checkout <branch>`. And then the usual `git add`, `git commit -m` and `git push`.
+
+In brief, I wrote what I think would be a feature requirements document in the devlog.spec file. To see the update, go to the branch and read it. lol.
+
+In any case, I've learnt that running `:r !date` in nvim would insert the date on a newline. This is much more pleasant that typing it out manually. Right now, the date format is different from previous format. But I think the broke convention is small price to pay for convenience. It's also possible to configure the format used by the `date` command but that would mean more typing. So for now, I'll stick with `:r !date`.
+
+
