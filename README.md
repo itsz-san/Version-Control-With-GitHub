@@ -216,3 +216,5 @@ In brief, I wrote what I think would be a feature requirements document in the d
 In any case, I've learnt that running `:r !date` in nvim would insert the date on a newline. This is much more pleasant that typing it out manually. Right now, the date format is different from previous format. But I think the broke convention is small price to pay for convenience. It's also possible to configure the format used by the `date` command but that would mean more typing. So for now, I'll stick with `:r !date`.
 
 
+Fri  9 Dec 19:34:43 +08 2022
+Out of curiosity, I tried using cli-gh to create issue via `gh issue create`. The issue was created but I didn't know how to use nano to compose the body for the issue. Every keystroke presented gibberish on the screen. And I didn't know what to do. In any case, it would seem that it is possible to at least create and view GitHub issues from the cli. I probably just need to learn a bit more. But let's put off the deep dive into cli-gh for later.
