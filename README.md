@@ -245,3 +245,12 @@ In trying to understand how to write better commit messages, I found out that it
 - revert
 
 I feel like git commit messages should have been covered in the course. It gives context to when to know to make commits. I suppose based on the list above, most of my commits doesn't fall into any type category. I think for now, I'll prefix my messages with `nani:` to refer to commits that I make that doesn't fall into any type category. 
+
+Fri  9 Dec 23:26:11 +08 2022
+Watched Video: HEAD from Meta's Version Control course. I have no idea what was the point of this video. XD
+
+The lesson showed us the hidden `.git` folder, how to access it and how to run cat on some files to show the ID or something something. What the fuck was the point of all this? To begin with, I feel like a lesson on the `.git` folder could have given some context. Heck, it's week 3 of the Version Control course, I think we're about due for some explanations on the inner workings of git.
+
+Wew, I took a breather. I sounded agitated a few lines ago. Which is true. I am annoyed. In any case, I read up [A Detailed Explanation of the Underlying Data Structures and Principles of Git](https://www.alibabacloud.com/blog/a-detailed-explanation-of-the-underlying-data-structures-and-principles-of-git_597391#:~:text=There%20are%20four%20major%20types,data%20structure%20of%20each%20object.). Also see [Git Internals - Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) and [Git Internals - Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References).
+
+
