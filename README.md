@@ -218,3 +218,30 @@ In any case, I've learnt that running `:r !date` in nvim would insert the date o
 
 Fri  9 Dec 19:34:43 +08 2022
 Out of curiosity, I tried using cli-gh to create issue via `gh issue create`. The issue was created but I didn't know how to use nano to compose the body for the issue. Every keystroke presented gibberish on the screen. And I didn't know what to do. In any case, it would seem that it is possible to at least create and view GitHub issues from the cli. I probably just need to learn a bit more. But let's put off the deep dive into cli-gh for later.
+
+Fri  9 Dec 22:43:17 +08 2022
+Watched Video: Example workflow from Meta's Version Control course. Can't say the content was meaningful.It covered commands that was already touched on previously. Namely, `git checkout -b "feature/new-branch"` to create and switch to a new branch. It also introduced the `git add .` command but it didn't even explain what it does. I found out by googling that it is used to add everything in the current directory and all files within it recursively.
+
+The lesson also used `git commit -m "chore: created new branch with new README file"`. The way the commit message was written caught my eye. I went ahead to find out what some tips are on writing commit mesages.
+
+Notably, [Conventional Commits 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/) is a good resource to get started. From there, I got to know that commit messages can include multi-paragraph and multiple footers.
+
+Also worth noting is that best practices varies from project to project. Some projects would define their own conventions, while others don't at all.
+
+This article [How to Write Good Commit Messages: A Practical Git Guide](https://www.freecodecamp.org/news/writing-good-commit-messages-a-practical-guide/) from freecodecamp is also pretty handy.
+
+It showed me how to configure the default editor for commit messages via `git config --global core.editor nano`. In my case, I switched nano to nvim. Now everytime I run `git commit`, I will be directed to a nvim buffer to write my commit message.
+
+I just have to remember that **the first line is the short description and that it has to be around 50 characters or less**. After an empty line break, everything will be added as the extended description.
+
+In trying to understand how to write better commit messages, I found out that it is necessary to know the different types of commit. Some example include;
+- feat
+- fix
+- style
+- refactor
+- test
+- docs
+- chore
+- revert
+
+I feel like git commit messages should have been covered in the course. It gives context to when to know to make commits. I suppose based on the list above, most of my commits doesn't fall into any type category. I think for now, I'll prefix my messages with `nani:` to refer to commits that I make that doesn't fall into any type category. 
