@@ -254,3 +254,56 @@ The lesson showed us the hidden `.git` folder, how to access it and how to run c
 Wew, I took a breather. I sounded agitated a few lines ago. Which is true. I am annoyed. In any case, I read up [A Detailed Explanation of the Underlying Data Structures and Principles of Git](https://www.alibabacloud.com/blog/a-detailed-explanation-of-the-underlying-data-structures-and-principles-of-git_597391#:~:text=There%20are%20four%20major%20types,data%20structure%20of%20each%20object.). Also see [Git Internals - Git Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) and [Git Internals - Git References](https://git-scm.com/book/en/v2/Git-Internals-Git-References).
 
 
+Sat 10 Dec 01:46:10 +08 2022
+Watched Video: Diff Commands from Meta's Version Control course. Alright, this lesson was pretty decent. I followed along and practiced some ways to use the command.
+
+I learnt how to use the command to check between different versions of commits.
+
+`git diff HEAD <filename>` as shown from the course, comapares the file version in the working tree with the file version last commmited in the remote repository i.e STAGING AREA VS REMOTE AREA.
+
+If only one pointer(?) is given, the comparison will be against the STAGING AREA.
+
+We can compare a file between two different commits with `git diff <commit> <commit> <filename>`.
+
+We can compare between two diffent commits simply by excluding a filepath.
+
+The `<commit>` argument mentioned above can be found by running `git log --pretty=oneline` command. An example of the output;
+```
+9812143c5ce72e1e34d602d2466d4db8aba248fa (HEAD -> master) nani: Added new file to practice diff commands
+f965b745b66027e5d8a58abc5c0c902a49273b15 nani: watched HEAD from the course
+18924ab6742a7eb228f7853f48f8870b08494f6c (origin/master) nani: of workflow and good commit messages
+c814ef1ac04abf6c055dce130f2e6a1ac7ef2300 Attempted to use cli-gh to create issue with partial success.
+aa090fb636c739cdfde1a89a4d3e5bcaf10cdce5 From now onwards, the timestamp follows the defaul output of date command.
+476e9a2fff0df094941370556422e4e7ebabadca Finished this experiment with push and pull.
+290648fa99c42e5fdfa40cbb0f1e7d63fe024839 Resolved conflict in README.md
+6a81d6181cc78a49cab7edea57a57049328dea96 Not sure why there's a conflict with README.md
+6ad0f27bac2eb1c869703d54e7949adbb026a8e4 Resolved Conflict: Testing Push and Pull.tx
+```
+
+That massively long string is what we want. By the way that shit is called the **commit hash** and serves like unique id for each commit.
+
+This got me wondering if there's an easier way to get the hash. So I went diggin a little and read [Git Basics - Viewing the Commit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History). I learnt that I could use `git log --pretty=format:"%h -  %cr : %s"` This will return;
+
+```
+❯ git log --pretty=format:"%h -  %cr : %s"
+9812143 -  27 minutes ago : nani: Added new file to practice diff commands
+f965b74 -  3 hours ago : nani: watched HEAD from the course
+18924ab -  3 hours ago : nani: of workflow and good commit messages
+c814ef1 -  6 hours ago : Attempted to use cli-gh to create issue with partial success.
+aa090fb -  8 hours ago : From now onwards, the timestamp follows the defaul output of date command.
+476e9a2 -  28 hours ago : Finished this experiment with push and pull.
+290648f -  28 hours ago : Resolved conflict in README.md
+6a81d61 -  28 hours ago : Not sure why there's a conflict with README.md
+6ad0f27 -  28 hours ago : Resolved Conflict: Testing Push and Pull.tx
+2d2a9c7 -  30 hours ago : Changed "Testing Push and Pull.txt" from GitHub
+f331f21 -  30 hours ago : Added Testing Push and Pull.txt
+720aec2 -  2 days ago : Tadaima, from the other branch
+32d399a -  2 days ago : Preparing to create new branch
+bc3ff06 -  2 days ago : Practice Add, Restore, Commit and Push.
+0abda30 -  3 days ago : Getting my head around commits.
+c66762a -  3 days ago : Initial commit
+```
+
+I would still have to manually type 7 characters for the hash but it's better than what I had to deal with previously.
+
+Also, it is possible to run `git diff <branch> <branch>`. Just throwing it out there. While I now understand how to use these commands. I don't quite get when to use them practically. 
