@@ -327,5 +327,12 @@ After the video, I went ahead and read up the [Official Reference for Git Blame]
 Oh wells.
 
 
+Sat 10 Dec 18:06:50 +08 2022
+Completed Reading: Fork from Meta's Version Control course. I wonder how they decide what topics should be covered as a video as opposed to a reading. I feel we should have both. Video as the main medium, and reading for well... additional reading.
 
+This lesson walked us through making a fork and pull request from [this](https://github.com/Meta-Front-End-Developer-PC/forking-lesson) repo on GitHub. I followed along, but used cli-gh instead. I'm extra like that. Seeing this, I feel like it was a wasted opportunity. The whole course could have been designed around a repo like this. i.e cloning it, making a branch, see changes and making a pull request. 
+
+An idea I have for this lesson. Get students to fork and clone the repo. Get students to create a file called REVIEW-[student name].md. Have a file called REVIEW-TEMPLATE.md. Get students to cat the template into their own file. Fill up the file, which essentially is a guided questionaire to review the course. After that, make a pull request. This way, students can go and see all the pull requests, and also see what other students have to say.
+
+Man, I'm a smart.
 
