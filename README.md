@@ -307,3 +307,25 @@ c66762a -  3 days ago : Initial commit
 I would still have to manually type 7 characters for the hash but it's better than what I had to deal with previously.
 
 Also, it is possible to run `git diff <branch> <branch>`. Just throwing it out there. While I now understand how to use these commands. I don't quite get when to use them practically. 
+
+Sat 10 Dec 16:47:59 +08 2022
+Watched Video: Blame from Meta's Version Control course. `git blame` is command for keeping track of who did what and when. 
+
+The official documentation defines it as "git-blame Show what revision and author last modified each line of a file."
+
+It returns information in the following format `<ID><Author><Time><Line Number><Content>` by default. The format of the output can be changed with some flags. The video lesson used `-l` as an example, showing that it will return a more detailed output. Though I'm not quite sure why we would want that.
+
+I would probably need to see for practical examples of how others use git blame.
+
+One particularly not worthy flag used in the video was the `-L` flag, which is used for specifying range. Using `git blame <filename>` will show all the revision information which can get pretty long. To narrow the scope to a few lines, we can do `git blame -L <start line>,<end line> filename`. We can use numberals or regular expressions to specify the line range. 
+
+`git blame` is often used in conjunction with `git log`. The former will display the point where changes were made and the latter will give more detail of the change. The workflow is to use `git blame` to identify the commit id and then use it with `git log`.
+
+
+After the video, I went ahead and read up the [Official Reference for Git Blame](https://git-scm.com/docs/git-blame). I've come to realised that the official reference is a better source of learning that the course itself. I find that the official reference grouped content more sensibly. For example, `git blame` is filed under Debugging, and `git log`, `git diff` are filed under Inspection and Comparison. I think it's worthwhile to go read through the official reference to get a better grasp of git. Also, [Git Immersion](https://gitimmersion.com/) provide a far better experience of follow along and learn that the course. 
+
+Oh wells.
+
+
+
+
